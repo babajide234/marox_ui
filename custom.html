@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/tailwindcss" href="style.css">
+    <style type="text/tailwindcss">
+        .step__item{
+            @apply relative w-[calc(100%-3px)] flex flex-col justify-center items-center;
+        }
+        .step__item:not(:first-child)::before{
+            @apply content-[''] bg-[#119726] absolute w-full h-3 right-1/2 top-1/2 -translate-y-2/4;
+        }
+        .step{
+            @apply w-16 h-16 z-10 bg-[#119726] text-white flex justify-center items-center rounded-full text-3xl font-bold ;
+        }
+        .panel-menu{
+            @apply relative flex w-full h-[70px]  ;
+        }
+        .panel-menu::before{
+            @apply content-[''] w-full absolute bottom-0 left-0 h-[4px] bg-gray-300 ;
+        }
+        .panel-menu-item{
+            @apply text-2xl grow text-center font-semibold text-gray-500 hover:border-b-4 z-10 border-solid py-4 border-[#11841F];
+        }
+        .panel-menu-item.active{
+            @apply text-[#11841F] border-[#11841F];
+        }
+        .panel-body{
+            @apply relative flex flex-col w-full h-[calc(100%-70px)] py-14;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="">
+        <div class="relative  bg-[#212121] text-white ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+              <div class="flex items-center justify-between py-6">
+                    <a href="" class="">
+                        <img src="./img/logo.svg" alt="" class="">
+                    </a>
+                    <nav class=" " role="navigation" aria-label="header nav">
+                        <ul class=" flex ">
+                            <li class=""><a href="/" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">Home</a></li>
+                            <li class=""><a href="/about.html" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">How It Works</a></li>
+                            <li class=""><a href="/services.html" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">Services</a></li>
+                            <li class=""><a href="/packages.html" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">Packages</a></li>
+                            <li class=""><a href="" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointerlast-of-type:mr-0">Portfolio</a></li>
+                        </ul>
+                    </nav>
+                    <div class="flex items-center">
+                        <div class="flex mr-6">
+                            <img src="" alt="" class="">
+                            <p class="">+1 (315) 675-7759</p>
+                        </div>
+                        <button class=" border border-[#119726] rounded-full py-2 px-10 text-[#119726] hover:bg-[#119726] hover:text-white"> Login </button>
+                    </div>
+              </div>
+            </div>
+          </div>
+    </header>
+    <div class="relative h-80">
+        <div class="flex">
+            <img src="./img/1.png" alt="" class=" w-full">
+            <img src="./img/2.png" alt="" class=" w-full">
+            <img src="./img/3.png" alt="" class=" w-full">
+            <img src="./img/4.png" alt="" class=" w-full">
+        </div>
+        <div class="bg-[#212121]  bg-opacity-90 h-80 absolute top-0 left-0 w-full flex justify-center items-center">
+            <h1 class=" text-6xl text-gray-100 font-bold text-center leading-normal">All Our <br/><span class=" text-[#11841F]">Packages</span></h1>
+        </div>
+    </div>
+
+    <div class="bg-white min:h-screen mt-10">
+        <div class="relative">
+            <div class="mx-auto  max-w-7xl px-4 sm:px-6">
+                <div class="flex flex-col">
+                    <div class=" text-center mb-10">
+                        <h2 class=" font-bold text-4xl mb-3 text-gray-700">Create Your Custom Package</h2>
+                        <p class=" px-20 text-2xl text-gray-700">
+                            Interested in only certain items in a package? goodnews, you can create your own custom package, select only the designs you need below!
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col bg-white border border-solid border-gray-300 w-3/4 mx-auto rounded-[25px] drop-shadow-[5px_4px_0px_#11841F] py-10 px-28 mb-14 ">
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Logo design</span>
+                                <span>$150</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Business card design</span>
+                                <span>$60</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Letterhead design</span>
+                                <span>$60</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Flyer design</span>
+                                <span>$60</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Logo animation</span>
+                                <span>$60</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Label design</span>
+                                <span>$60</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Envelope design</span>
+                                <span>$60</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <input type="checkbox" name="" id="" class="mr-5 w-8 h-8">
+                            <label for="" class=" text-2xl flex w-full justify-between">
+                                <span>Web development</span>
+                                <span>$1500</span>
+                            </label>
+                        </div>
+                        <div class="flex items-center text-gray-800 mb-5">
+                            <div for="" class=" text-2xl flex w-full justify-between border-t border-solid border-gray-300 pt-4">
+                                <span>Total</span>
+                                <span>$0</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end mb-10">
+                            <a href="./order-complete.html" class=" border-2 border-solid border-[#11841F] text-[#11841F] text-xl  w-[170px] px-3  py-[5px] font-bold flex justify-center items-center hover:cursor-pointer hover:bg-[#119726] hover:text-white transition ease-in-out rounded-[25px]">Pay</a>
+                        </div>
+                        <div class="flex justify-end">
+                            <a href="" class=" text-[#119726] underline text-xl font-bold">See Full Packages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" bg-[#F5F5F5] min:h-screen mt-10 pb-20">
+        <div class="relative">
+            <div class="mx-auto  max-w-7xl px-4 sm:px-6">
+                <div class="flex flex-col">
+                    <div class="flex flex-col justify-center items-center py-6">
+                        <h2 class=" text-2xl font-semibold text-[#119726]">Explore Our Creative Designs</h2>
+                        <h3 class=" text-4xl font-semibold mt-6 text-gray-900">We Specialize In All Digital Designs And Professional Branding</h3>
+                    </div>
+                </div>
+                <div class="flex items-center  w-full ">
+                    <a class=" w-[300px] h-[200px] flex drop-shadow-[5px_4px_0px_#11841F] bg-cover bg-center bg-no-repeat rounded-[25px] mr-10"
+                        style=" background-image: url('./img/3.png'); background-size: cover;"
+                    ></a>
+                    <a class=" w-[300px] h-[200px] flex drop-shadow-[5px_4px_0px_#11841F] bg-cover bg-center bg-no-repeat rounded-[25px] mr-10"
+                        style=" background: url('./img/3.png'); background-size: cover;"
+                    ></a>
+                    <a class=" w-[500px] h-[280px] flex drop-shadow-[5px_4px_0px_#11841F] bg-cover bg-center bg-no-repeat rounded-[25px] mr-10"
+                        style=" background: url('./img/3.png'); background-size: cover;"
+                    ></a>
+                    <a class=" w-[300px] h-[200px] flex drop-shadow-[5px_4px_0px_#11841F] bg-cover bg-center bg-no-repeat rounded-[25px] mr-10"
+                        style=" background: url('./img/3.png'); background-size: cover;"
+                    ></a>
+                    <a class=" w-[300px] h-[200px] flex drop-shadow-[5px_4px_0px_#11841F] bg-cover bg-center bg-no-repeat rounded-[25px] mr-10"
+                        style=" background: url('./img/3.png'); background-size: cover;"
+                    ></a>
+                </div>
+                <div class="mb-4 mt-10 flex justify-center">
+                    <ul class="flex ">
+                        <li class=" w-[12px] h-[12px] bg-gray-400 rounded-full mr-3 "></li>
+                        <li class=" w-[12px] h-[12px] bg-gray-400 rounded-full mr-3 "></li>
+                        <li class=" w-[12px] h-[12px] bg-gray-400 rounded-full mr-3 "></li>
+                        <li class=" w-[12px] h-[12px] bg-gray-400 rounded-full mr-3 "></li>
+                        <li class=" w-[12px] h-[12px] bg-gray-400 rounded-full mr-3 "></li>
+                    </ul>
+                </div>
+                <div class=" flex justify-center py-6">
+                    <a href="" class=" font-bold  hover:bg-[#119726] hover:text-white bg-[#119726] text-white text-xl rounded-full py-4 px-28">See Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-28"></div>
+    <footer class=" bg-black min:h-[470px]">
+        <div class="relative">
+            <div class="mx-auto  max-w-7xl px-4 sm:px-6">
+                <img src="./img/md-2.png" alt="" class=" h-56 w-86 right-0 top-24 absolute ">
+                <div class=" flex pt-14 ">
+                    <div class=" w-64 flex flex-col mr-20">
+                        <img src="./img/Vector.png" alt="" class="mb-4 w-72">
+                        <img src="./img/Vector (2).png" alt="" class=" w-56 mb-5">
+                        <p class=" text-gray-400 mb-4">Your no. one professional design company, we are reliable and efficient in all digital designs.</p>
+                        <div class=" flex justify-between">
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/facebook.svg" alt="" class=" w-6 h-6">
+                            </div>
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/instagram.svg" alt="" class=" w-6 h-6">
+                            </div>
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/twitter.svg" alt="" class=" w-6 h-6">
+                            </div>
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/linkedin.svg" alt="" class=" w-6 h-6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" grid grid-cols-3 pt-14" >
+                        <div class="">
+                            <h3 class=" text-white text-3xl font-thin mb-4">Quick Links</h3>
+                            <ul class="">
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Portfolio</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Pricing</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">About</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Services</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h3 class=" text-white text-3xl font-thin mb-4">Design Services</h3>
+                            <ul class="">
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Logo</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Flyer</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Web Development</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Business Card</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Letterhead</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h3 class=" text-white text-3xl font-thin mb-4">Contact Us</h3>
+                            <ul class="">
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">maroxdesign@gmail.com</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">+1 (315)675 7759</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">772 Lyonwood Ave Walnut, CA 91789</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex justify-between py-4">
+                    <p class=" text-gray-300 font-thin text-sm">© 2022 MaroxDesign. All rights reserved</p>
+                    <p class=" text-gray-300 font-thin text-sm"><a href="" class=" border-r border-solid pr-2 hover:text-[#11841F] transition ease-in-out">Terms & Conditions</a> <a href="" class="border-r border-solid pr-2 hover:text-[#11841F] transition ease-in-out">Privacy Policy</a> <a href="" class="hover:text-[#11841F] transition ease-in-out">Disclaimer</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

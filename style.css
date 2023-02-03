@@ -1,0 +1,6 @@
+.step__item{
+    @apply bg-slate-200;
+}
+.step__item::after{
+    @apply content-[''] bg-slate-200 absolute w-full h-3 ;
+}

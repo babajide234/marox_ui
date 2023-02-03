@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/tailwindcss" href="style.css">
+    <style type="text/tailwindcss">
+        .step__item{
+            @apply relative w-[calc(100%-3px)] flex flex-col justify-center items-center;
+        }
+        .step__item:not(:first-child)::before{
+            @apply content-[''] bg-[#CCD2E3] absolute w-full h-3 right-1/2 top-1/2 -translate-y-2/4;
+        }
+        .step__item.active::not(:first-child)::after{
+            @apply content-[''] bg-[#119726] absolute w-full  h-3 right-1/2 top-1/2 -translate-y-2/4;
+        }
+        .step{
+            @apply w-16 h-16 z-10 bg-[#CCD2E3] text-white flex justify-center items-center rounded-full text-3xl font-bold ;
+        }
+        .step.active{
+            @apply bg-[#119726];
+        }
+        .panel-menu{
+            @apply relative flex w-full h-[70px]  ;
+        }
+        .panel-menu::before{
+            @apply content-[''] w-full absolute bottom-0 left-0 h-[4px] bg-gray-300 ;
+        }
+        .panel-menu-item{
+            @apply text-2xl grow text-center font-semibold text-gray-500 hover:border-b-4 z-10 border-solid py-4 border-[#11841F];
+        }
+        .panel-menu-item.active{
+            @apply text-[#11841F] border-[#11841F];
+        }
+        .panel-body{
+            @apply relative flex flex-col w-full h-[calc(100%-70px)] py-14;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="">
+        <div class="relative  bg-[#212121] text-white ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+              <div class="flex items-center justify-between py-6">
+                    <a href="" class="">
+                        <img src="./img/logo.svg" alt="" class="">
+                    </a>
+                    <nav class=" " role="navigation" aria-label="header nav">
+                        <ul class=" flex ">
+                            <li class=""><a href="/" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">Home</a></li>
+                            <li class=""><a href="/about.html" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">How It Works</a></li>
+                            <li class=""><a href="/services.html" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">Services</a></li>
+                            <li class=""><a href="/packages.html" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointer">Packages</a></li>
+                            <li class=""><a href="" class=" text-capitalize mr-20 hover:text-[#119726] hover:cursor-pointerlast-of-type:mr-0">Portfolio</a></li>
+                        </ul>
+                    </nav>
+                    <div class="flex items-center">
+                        <div class="flex mr-6">
+                            <img src="" alt="" class="">
+                            <p class="">+1 (315) 675-7759</p>
+                        </div>
+                        <button class=" border border-[#119726] rounded-full py-2 px-10 text-[#119726] hover:bg-[#119726] hover:text-white"> Login </button>
+                    </div>
+              </div>
+            </div>
+          </div>
+    </header>
+    <div class="relative h-80">
+        <div class="flex">
+            <img src="./img/1.png" alt="" class=" w-full">
+            <img src="./img/2.png" alt="" class=" w-full">
+            <img src="./img/3.png" alt="" class=" w-full">
+            <img src="./img/4.png" alt="" class=" w-full">
+        </div>
+        <div class="bg-[#212121]  bg-opacity-90 h-80 absolute top-0 left-0 w-full flex flex-col justify-center items-center">
+            <h1 class=" text-6xl text-gray-100 font-bold text-center leading-normal">Complete
+                <br/><span class=" text-[#11841F]">Your Order</span></h1>
+                <div class="flex mx-auto w-full justify-between">
+                    <div class="step__item active">
+                        <div class="step active">1</div>
+                    </div>
+                    <div class="step__item active">
+                        <div class="step active">2</div>
+                    </div>
+                    <div class="step__item active">
+                        <div class="step">3</div>
+                    </div>
+                </div>
+        </div>
+        <div class="mx-auto  max-w-5xl px-4 sm:px-6 ">
+            <ul class=" flex w-full justify-between mt-5">
+                <li class=" text-2xl font-semibold">Login</li>
+                <li class=" text-2xl font-semibold">Make payment</li>
+                <li class=" text-2xl font-semibold">Fill requirements</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-white min:h-screen mt-20">
+        <div class="relative">
+            <div class="mx-auto  max-w-7xl px-4 sm:px-6">
+                <div class=" grid grid-cols-2 gap-20">
+                    <div class=" w-full shadow-lg border border-solid border-gray-200 rounded-[10px] px-14 py-10 min:h-28 flex flex-col">
+                        <div class="">
+                            <h2 class=" font-bold text-3xl text-gray-600 mb-14">Order Summary</h2>
+                        </div>
+                        <div class=" flex justify-between items-start">
+                            <div class=" text-gray-600">
+                                <h3 class=" text-2xl mb-2">Basic package</h3>
+                                <ul class="">
+                                    <li>
+                                        <h4 class=" text-xl border-b border-solid border-gray-200 w-fit pb-3 mb-3" >Package content</h4>
+                                        <ul>
+                                            <li>JPEG(custom logo file)</li>
+                                            <li>PNG(transparent file)</li>
+                                            <li>3D mock-ups</li>
+                                            <li>Vector files(PSD,Ai and SVG)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="">
+                                <h3 class=" text-3xl font-normal text-gray-600">$150</h3>
+                            </div>
+                        </div>
+                        <div class=" flex justify-between mt-4 pt-4 border-t border-solid border-gray-200 ">
+                            <h3 class="text-2xl font-normal text-gray-600">Total</h3>
+                            <h3 class="text-2xl font-normal text-gray-600">$150</h3>
+                        </div>
+                    </div>
+                    <div class="w-full shadow-lg border border-solid border-gray-200 rounded-[10px] px-14 py-10 min:h-28 flex flex-col">
+                        <div class=" hidden">
+
+                            <div class=" flex flex-col mb-10">
+                                <h1 class=" text-4xl font-bold mb-4">Login</h1>
+                                <p class=" text-xl">Login to proceed</p>
+                            </div>
+                            <div class="">
+                                <form action="" class="">
+                                    <div class="mb-7">
+                                        <input type="text" class=" h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none">
+                                    </div>
+                                    <div class="mb-7">
+                                        <input type="text" class="h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none">
+                                    </div>
+                                    <div class="flex justify-between mb-10">
+                                        <div class="flex items-center ">
+                                            <input type="checkbox" name="" id="" class=" mr-4">
+                                            <label for="" class="text-capitalize text-md font-thin">Stay logged in</label>
+                                        </div>
+                                        <a href="" class=" text-lg text-[#11841F]">Forgot password?</a>
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <button type="submit" class=" w-4/5 bg-[#11841F] rounded-full text-xl py-4 text-white">Proceed To Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="">
+                                <h2 class=" font-bold text-3xl text-gray-600 mb-14">Make Payment</h2>
+                            </div>
+                            <div class="">
+                                <form action="" class="">
+                                    <div class="mb-7">
+                                        <label for="" class=" text-gray-600 font-semibold">Card no.</label>
+                                        <input 
+                                            type="text" 
+                                            class=" mt-2 h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none"
+                                            placeholder="0000 1111 2222 3333"
+                                        />
+                                    </div>
+                                    <div class="mb-7 grid grid-cols-2 gap-10">
+                                        <div class="">
+                                             <label for="" class=" text-gray-600 font-semibold">Exp. Date</label>
+                                            <input 
+                                                type="text" 
+                                                class=" mt-2 h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none"
+                                                placeholder="MM/YY"
+                                            />
+                                        </div>
+                                        <div class="">
+                                            <label for="" class="text-gray-600 font-semibold">CVV</label>
+                                            <input 
+                                                type="text" 
+                                                class=" mt-2 h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none"
+                                                placeholder="000"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between mb-10">
+                                        <div class="flex items-center ">
+                                            <input type="checkbox" name="" id="" class="mr-4 w-5 h-5">
+                                            <label class=" text-xl">I agree to the <a href="" class=" text-lg text-[#11841F]">Terms and Condition</a></label>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center ">
+                                        <button type="submit" class=" w-4/5 bg-[#11841F] rounded-full text-xl py-4 text-white">Make Payment</button>
+                                        <p class=" text-xl text-gray-500 mt-5">All Prices Are in USD</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" mt-14 ">
+                    <div class="w-full shadow-lg border border-solid border-gray-200 rounded-[10px] px-36 py-10 min:h-28 flex flex-col">
+                        <div class=" mb-10">
+                            <h3 class=" text-xl text-gray-600 font-semibold ">This information helps us tailor the design to suit your business.</h3>
+                        </div>
+                        <div class="">
+                            <form action="" class="">
+                                <div class="mb-7">
+                                    <label for="" class=" text-gray-600 font-semibold">1. What’s your business name?</label>
+                                    <input 
+                                        type="text" 
+                                        class=" mt-2 h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none"
+                                        placeholder="Ex: Marox Design LLC"
+                                    />
+                                </div>
+                                <div class="mb-7">
+                                    <label for="" class=" text-gray-600 font-semibold">2. What’s your business about?</label>
+                                    <input 
+                                        type="text" 
+                                        class=" mt-2 h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none"
+                                        placeholder="Ex: A creative branding agency, deals in all kinds of digital designs"
+                                    />
+                                </div>
+                                <div class="mb-7">
+                                    <label for="" class=" text-gray-600 font-semibold">3. What’s your preferred colors for the design?</label>
+                                    <input 
+                                        type="text" 
+                                        class=" mt-2 h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none"
+                                        placeholder="Ex: Red, Yellow, Black"
+                                    />
+                                </div>
+                                <div class="mb-7">
+                                    <label for="" class=" text-gray-600 font-semibold">4. What else would you like to see in your design? (optional)</label>
+                                    <input 
+                                        type="text" 
+                                        class=" mt-2 h-14 px-7 w-full border-4 border-gray-50 border-solid rounded-md outline-none focus:outline-[#11841F] focus:border-0 focus:shadow-none"
+                                        placeholder="Ex: Would love a picture of a jaguar and california map in one of the concepts"
+                                    />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-28"></div>
+    <footer class=" bg-black min:h-[470px]">
+        <div class="relative">
+            <div class="mx-auto  max-w-7xl px-4 sm:px-6">
+                <img src="./img/md-2.png" alt="" class=" h-56 w-86 right-0 top-24 absolute ">
+                <div class=" flex pt-14 ">
+                    <div class=" w-64 flex flex-col mr-20">
+                        <img src="./img/Vector.png" alt="" class="mb-4 w-72">
+                        <img src="./img/Vector (2).png" alt="" class=" w-56 mb-5">
+                        <p class=" text-gray-400 mb-4">Your no. one professional design company, we are reliable and efficient in all digital designs.</p>
+                        <div class=" flex justify-between">
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/facebook.svg" alt="" class=" w-6 h-6">
+                            </div>
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/instagram.svg" alt="" class=" w-6 h-6">
+                            </div>
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/twitter.svg" alt="" class=" w-6 h-6">
+                            </div>
+                            <div class=" w-10 h-10 rounded-full bg-gray-700 flex justify-center items-center">
+                                <img src="./img/linkedin.svg" alt="" class=" w-6 h-6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" grid grid-cols-3 pt-14" >
+                        <div class="">
+                            <h3 class=" text-white text-3xl font-thin mb-4">Quick Links</h3>
+                            <ul class="">
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Portfolio</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Pricing</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">About</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Services</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h3 class=" text-white text-3xl font-thin mb-4">Design Services</h3>
+                            <ul class="">
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Logo</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Flyer</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Web Development</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Business Card</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">Letterhead</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h3 class=" text-white text-3xl font-thin mb-4">Contact Us</h3>
+                            <ul class="">
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">maroxdesign@gmail.com</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">+1 (315)675 7759</a></li>
+                                <li class=" text-gray-300 text-sm mb-2 hover:text-[#11841F] transition ease-in-out"><a href="" class="">772 Lyonwood Ave Walnut, CA 91789</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex justify-between py-4">
+                    <p class=" text-gray-300 font-thin text-sm">© 2022 MaroxDesign. All rights reserved</p>
+                    <p class=" text-gray-300 font-thin text-sm"><a href="" class=" border-r border-solid pr-2 hover:text-[#11841F] transition ease-in-out">Terms & Conditions</a> <a href="" class="border-r border-solid pr-2 hover:text-[#11841F] transition ease-in-out">Privacy Policy</a> <a href="" class="hover:text-[#11841F] transition ease-in-out">Disclaimer</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
